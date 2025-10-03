@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
+
 // Vite provides import.meta.env automatically; no need to redeclare interfaces.
 
 export default function App() {
