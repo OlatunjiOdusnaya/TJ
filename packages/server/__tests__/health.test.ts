@@ -1,8 +1,9 @@
 import request from 'supertest';
-import app from '../src/index';
+import { createApp } from '../src/index';
 
 describe('GET /health', () => {
   it('returns ok', async () => {
+    const app = createApp();
     const res = await request(app).get('/health');
     expect(res.status).toBe(200);
     expect(res.body).toHaveProperty('status', 'ok');
